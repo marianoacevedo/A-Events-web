@@ -1,0 +1,39 @@
+.card-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 60px 
+}
+
+.card-articulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    border: 2px solid black;
+    height: 400px;
+}
+
+.card-precio-buttom {
+   display: flex;
+   justify-content: space-between;
+}
+
+.img, .card-descripion, .card-precio-buttom {
+    width: 90%;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+    .card-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .card-articulo{
+        width: 40%;
+        margin: 10px 0px 10px 0px;
+    }
+}
