@@ -2,7 +2,6 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    
 }
 
 header {
@@ -29,8 +28,8 @@ nav a:hover {
 
 nav {
     display: flex;
-    justify-content:end;
-    align-items: center;
+    justify-content:center;
+    align-items: end;
     height: 200px;
     background-image: url(../img/Logo\ Amazing\ Events.png);
     background-repeat:no-repeat;
