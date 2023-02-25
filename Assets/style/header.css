@@ -11,13 +11,13 @@ header {
 }
 
 nav a {
-    padding: 1px 1px 1px 1px;
-    margin: 5px;
+    padding: 1px;
+    margin: 3px;
     border: 2px solid black;
     color: black;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     width: 20%;
     background: none;
 }
@@ -44,9 +44,9 @@ nav {
     }
 
     nav a {
-        padding: 3px 3px 3px 3px;
-        margin: 5px;
-        width: 30%;
-        font-size: 10px;
+        padding: 1px;
+        margin: 1px;
+        width: 25%;
+        font-size: 9px;
     }
 }
