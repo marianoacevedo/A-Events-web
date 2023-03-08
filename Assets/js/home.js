@@ -8,7 +8,7 @@ function eventCard ()  {
                  <p class="card-descripion">${event.description}</p>
                  <div class="card-precio-buttom">
                  <p class="precio">$${event.price}</p>
-                 <button><a href="details.html">Ver Mas</a></button>
+                 <button><a href="details.html?id=${event._id}">Ver Mas</a></button>
                  </div>
                  </article>`
       cards.push(card)
