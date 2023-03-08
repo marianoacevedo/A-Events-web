@@ -1,8 +1,7 @@
 let cards = []
 
 function eventCard ()  {
- for (let event of data.events) {
-    if(data.currentDate < event.date){
+  for (let event of data.events) {
       let card =`<article class="card-articulo">
                  <img src="${event.image}" class="img" alt="cinema">
                  <h3>${event.name}</h3>
@@ -13,8 +12,7 @@ function eventCard ()  {
                  </div>
                  </article>`
       cards.push(card)
-    }
- }
+  }
   return cards.join('')
 }
 
