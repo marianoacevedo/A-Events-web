@@ -1,22 +1,36 @@
-let cards = []
+let urlApi = "https://mh-h0bh.onrender.com/api/amazing";
 
-function eventCard ()  {
- for (let event of data.events) {
-    if(data.currentDate > event.date){
-      let card =`<article class="card-articulo">
+let cardEvent = document.getElementById("cardEvent");
+
+let cards = [];
+
+function eventCard(date, response) {
+  for (let event of response) {
+    if (date > event.date) {
+      let card = `<article class="card-articulo">
                  <img src="${event.image}" class="img" alt="cinema">
                  <h3>${event.name}</h3>
                  <p class="card-descripion">${event.description}</p>
                  <div class="card-precio-buttom">
                  <p class="precio">$${event.price}</p>
-                 <button><a href="details.html?id=${event._id}">Ver Mas</a></button>
+                 <button><a href="details.html?id=${event.id}">Ver Mas</a></button>
                  </div>
-                 </article>`
-      cards.push(card)
+                 </article>`;
+      cards.push(card);
     }
- }
-  return cards.join('')
+  }
+  return cards.join("");
 }
 
-let cardEvent = document.getElementById("cardEvent")
-cardEvent.innerHTML = eventCard()
+async function eventCardApi() {
+  try {
+    let response = await fetch(urlApi);
+    
+    let data = await response.json();
+    
+    cardEvent.innerHTML = eventCard(data.date,data.response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+eventCardApi();
