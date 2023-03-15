@@ -27,6 +27,7 @@ async function eventCardApi(){
     let data = await response.json()
     
     cardEvent.innerHTML = eventCard(data.events)
+
   }
   catch(error){
     console.log(error)
