@@ -1,4 +1,4 @@
-let urlApi = "https://mh-h0bh.onrender.com/api/amazing";
+let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events";
 
 let detail = document.getElementById("detail");
 
@@ -14,7 +14,7 @@ async function eventCardApi() {
 
     let data = await response.json();
 
-    let card = data.response.find((detail) => detail.id == id);
+    let card = data.events.find((detail) => detail.id == id);
 
     let cardDetail = `<div class="img-detail"><img src="${card.image}" class="img-medida" alt="cinema"></div>
                       <div class="box-description-detail">

@@ -1,14 +1,36 @@
-function captureCheck() {
-    let checks = document.querySelectorAll('.check-cat') 
+let urlApi1 = "https://api-amazingevents.onrender.com/api/amazing-events"
 
-    let data = {
-        [checks[0].name]: []
-    }
+let captureCheck = document.getElementById("check-cat")
 
-    for (let cat of checks) {
-        data[checks[0].name].push(cat.value)
-    }
+let checks = []
 
-    console.log(data)
+function cardCheck (check)  {
+  for (let event of check) {
+      let card =`<div class="check">
+                 <input type="checkbox" class="check-cat" name="categoria" id="${event.category}" value="${event.category}">
+                 <label for="${event.category}">${event.category}</label>
+                 </div>`
+      checks.push(card)  
+  }
+  return checks
 }
-captureCheck()
+
+async function checkApi(){
+  try{
+    let response = await fetch(urlApi1)
+    
+    let data = await response.json()
+
+    let filterCat = cardCheck(data.events)
+
+    let result = filterCat.filter((item,index)=>{
+        return filterCat.indexOf(item) === index;
+      })
+
+    captureCheck.innerHTML = result.join('')
+  }
+  catch(error){
+    console.log(error)
+  }
+}
+checkApi()

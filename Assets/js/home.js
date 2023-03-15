@@ -1,11 +1,11 @@
-let urlApi = "https://mh-h0bh.onrender.com/api/amazing"
+let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events"
 
 let cardEvent = document.getElementById("cardEvent")
 
 let cards = []
 
-function eventCard (response)  {
-  for (let event of response) {
+function eventCard (events)  {
+  for (let event of events) {
       let card =`<article class="card-articulo">
                  <img src="${event.image}" class="img" alt="cinema">
                  <h3>${event.name}</h3>
@@ -26,7 +26,7 @@ async function eventCardApi(){
     
     let data = await response.json()
     
-    cardEvent.innerHTML = eventCard(data.response)
+    cardEvent.innerHTML = eventCard(data.events)
   }
   catch(error){
     console.log(error)
