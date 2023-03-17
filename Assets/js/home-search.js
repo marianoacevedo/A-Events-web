@@ -1,6 +1,6 @@
 let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events";  //API
 
-let cardEventSearch = document.getElementById("cardEvent");
+let cardEvent = document.getElementById("cardEvent");
 
 let buttonSearch = document.getElementById("busca-button");               // Captura de documentos
 
@@ -41,20 +41,20 @@ console.log(filtro)
                   <p class="card-descripion">Not found</p>
                   </article>`;
   }
-  return filterSearch;
+  return filterSearch.join('');
 }
 
-async function searchApi() {                                              // Funcion async
+async function homeSearchApi() {                                              // Funcion async
   try {
     let response = await fetch(urlApi);                                   // Espera de respuesta de la API
 
     let data = await response.json();                                    // Espera de respuesta del response
     
-    cardEventSearch.innerHTML = (captureSearch(data.events)).join('');   // Impresion de card de todos los eventos
+    cardEvent.innerHTML = captureSearch(data.events);              // Impresion de card de todos los eventos
 
     let handleSearch = (event) => {
       event.preventDefault();
-      cardEventSearch.innerHTML = captureSearch(data.events).join('');   // Impresion de card de filtros
+      cardEvent.innerHTML = captureSearch(data.events);            // ejecuccion de funcion mediante evento
     };
 
     buttonSearch.addEventListener("click", handleSearch);                // boton para el evento del click
@@ -62,4 +62,4 @@ async function searchApi() {                                              // Fun
     console.log(error);
   }
 }
-searchApi();                                                            //invoco funcion
+homeSearchApi();                                                            //invoco funcion

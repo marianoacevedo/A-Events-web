@@ -1,6 +1,6 @@
 let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=upcoming";
 
-let cardEventSearch = document.getElementById("cardEvent");
+let cardEvent = document.getElementById("cardEvent");
 
 let buttonSearch = document.getElementById("busca-button");
 
@@ -41,20 +41,20 @@ console.log(filtro)
                   <p class="card-descripion">Not found</p>
                   </article>`;
   }
-  return filterSearch;
+  return filterSearch.join('');
 }
 
-async function searchApi() {
+async function upcomingSearchApi() {
   try {
     let response = await fetch(urlApi);
 
     let data = await response.json();
     
-    cardEventSearch.innerHTML = (captureSearch(data.events)).join('');
+    cardEvent.innerHTML = captureSearch(data.events);
 
     let handleSearch = (event) => {
       event.preventDefault();
-      cardEventSearch.innerHTML = captureSearch(data.events).join('');
+      cardEvent.innerHTML = captureSearch(data.events);
     };
 
     buttonSearch.addEventListener("click", handleSearch);
@@ -62,4 +62,4 @@ async function searchApi() {
     console.log(error);
   }
 }
-searchApi();
+upcomingSearchApi();
