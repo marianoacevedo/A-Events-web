@@ -6,24 +6,27 @@
 
 header {
     height: 210px;
-    border: 2px solid black;
-    background-color: grey;
+    background:#A1C3CA;
 }
 
 nav a {
     padding: 1px;
     margin: 3px;
-    border: 2px solid black;
-    color: black;
+    border: 1px solid rgba(43, 7, 243, 0.986);
     text-align: center;
     text-decoration: none;
     font-size: 18px;
     width: 20%;
     background: none;
+    border-radius: 5px;
+    color: hsl(234, 12%, 34%);
+    font-weight: hsl(229, 6%, 66%);
 }
 
 nav a:hover {
     background-color: white;
+    transform: rotateX(9deg) translateY(-8px);
+    box-shadow: 0 10px 20px rgba(43, 7, 243, 0.986);
 }
 
 nav {

@@ -1,7 +1,6 @@
 footer {
 	display: flex;
 	align-items: center;
-	border: 2px solid black;
 	background-color: darkgrey;
 	height: 70px;
 }

@@ -1,24 +1,49 @@
+main {
+   background:#A1C3CA  ;
+}
+
 .carrusel-box {
    display: flex;
    justify-content: space-between;
    align-items: center;
    height: 100px;
-   border: 2px solid black;
    background: darkgrey;
 }
-
 
 .carrusel-a {
     text-decoration: none;
     font-size: 50px;
-    font-weight: bold;
-    color: black;
+    color: hsl(234, 12%, 34%);
+    font-weight: hsl(229, 6%, 66%);
     margin-left: 25px;
     margin-right: 25px;
 }
 
+.carrusel-a:hover{
+    transform: scaleX(3);
+    transform: scaleY(4);
+    transition: all 1s;
+    color: rgba(43, 7, 243, 0.986)
+}
+
 .carrusel-h1 {
 font-size: xx-large;
+color: hsl(234, 12%, 34%);
+font-weight: hsl(229, 6%, 66%);
+opacity: 0.8;
+    
+}
+
+.carrusel-h1:hover{
+    transform: scaleX(3);
+    transform: scaleY(4);
+    transition: all 2s;
+    color: rgba(43, 7, 243, 0.986)
+}
+
+.categoria{
+    color: hsl(234, 12%, 34%);
+    font-weight: hsl(229, 6%, 66%);
 }
 
 .box-check-busca {
@@ -49,10 +74,13 @@ font-size: xx-large;
 .input-busca{ 
     padding: 5px;
     width: 50%;
+    border-radius: 5px;
 }
 
 .button-busca{
     padding: 5px;
+    border-radius: 5px;
+    color: rgba(43, 7, 243, 0.986)
 }
 
 @media (min-width: 375px) and (max-width: 767px) {

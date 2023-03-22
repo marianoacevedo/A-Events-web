@@ -8,7 +8,7 @@ function cardCheck (check)  {
   for (let event of check) {
       let card =`<div class="check">
                  <input type="checkbox" class="check-cat" name="categoria" id="${event.category}" value="${event.category}">
-                 <label for="${event.category}">${event.category}</label>
+                 <label class="categoria" for="${event.category}">${event.category}</label>
                  </div>`
       checks.push(card)  
   }
