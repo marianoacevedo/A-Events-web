@@ -29,7 +29,7 @@ console.log(filtro)
                   <p class="card-descripion">${event.description}</p>
                   <div class="card-precio-buttom">
                   <p class="precio">$${event.price}</p>
-                  <button><a href="details.html?id=${event.id}">Ver Mas</a></button>
+                  <button class="card-buttom"><a href="details.html?id=${event.id}">Ver Mas...</a></button>
                   </div>
                   </article>`;
       filterSearch.push(card);
