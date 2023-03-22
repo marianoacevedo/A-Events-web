@@ -13,12 +13,25 @@
     margin: 5px;
 }
 
+.label-titulo{
+    color: hsl(234, 12%, 34%);
+    font-weight: hsl(229, 6%, 66%);
+    opacity: 0.8;
+    font-size: 20px;
+}
+
 .input-contact {
     padding: 5px;
+    border-radius: 8px;
+    background: rgb(205, 226, 243);
+    border-color: rgba(43, 7, 243, 0.986);
 }
 
 .input-contact-msj {
-    padding-bottom: 60px;
+    padding: 5px 5px 60px 5px;
+    border-radius: 8px;
+    background: rgb(205, 226, 243);
+    border-color: rgba(43, 7, 243, 0.986);
 }
 
 .box-submit-contact {
@@ -31,4 +44,16 @@
     padding: 5px;
     margin-top: 10px;
     width: 30%;
+    border-radius: 8px;
+    background: rgb(205, 226, 243);
+    border-color: rgba(43, 7, 243, 0.986);
+    color: hsl(234, 12%, 34%);
+    font-weight: hsl(229, 6%, 66%);
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.input-contact-enviar:hover{
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(43, 7, 243, 0.986);
 }
