@@ -20,6 +20,11 @@ async function eventCardApi() {
                       <div class="box-description-detail">
                       <h3 class="detail-h3">${card.name}</h3>
                       <p class="card-descripion-detail">${card.description}</p>
+                      <div class="box-cat-price">
+                      <p class="categoria">Categoria: ${card.category}</p>
+                      <p class="precio">Precio: $${card.price}</p>
+                      </div>
+                      <button class="bottom"><a href="index.html">Regresar</a></button>
                       </div>`;
 
     detail.innerHTML = cardDetail;
