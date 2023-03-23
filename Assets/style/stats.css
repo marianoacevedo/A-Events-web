@@ -1,19 +1,34 @@
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid rgba(43, 7, 243, 0.986);
     border-collapse: collapse;
+    color: hsl(234, 12%, 34%);
+    font-weight: hsl(229, 6%, 66%);
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
   }
 
 table {
     width: 95%;
     margin: 15px 0px 15px 0px;
+    
+}
+
+.td{
+    background-color: gray;
+    color: white;
 }
 
 th {
-    text-align: start;
     font-size: x-large;
     font-weight: bold;
     padding: 5px;
-    background-color: gray;
+    background: rgb(205, 226, 243);
+}
+
+th:hover{
+    transform: rotateX(9deg) translateY(-8px);
+    background-color: white;
 }
 
 .table-box {
